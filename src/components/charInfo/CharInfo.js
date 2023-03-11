@@ -1,7 +1,6 @@
 import './charInfo.scss';
 
 import MarvelService from '../../services/MarvelService';
-import thor from '../../resources/img/thor.jpeg';
 
 import { Component } from 'react';
 
@@ -20,11 +19,12 @@ class CharInfo extends Component {
     marvelService = new MarvelService();
 
     componentDidMount() {
+        this.foo.bar = 0;
         this.updateChar();
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props.charId != prevProps.charId){
+        if (this.props.charId !== prevProps.charId){
             this.updateChar();
         }
     }
@@ -43,6 +43,8 @@ class CharInfo extends Component {
             .getCharacter(charId)
             .then(this.onCharLoaded)
             .catch(this.onError);
+
+        this.foo.bar = 3;
     }
 
     onCharLoaded = (char) => {
