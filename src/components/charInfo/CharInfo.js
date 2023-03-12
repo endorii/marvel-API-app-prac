@@ -19,7 +19,6 @@ class CharInfo extends Component {
     marvelService = new MarvelService();
 
     componentDidMount() {
-        this.foo.bar = 0;
         this.updateChar();
     }
 
@@ -44,7 +43,7 @@ class CharInfo extends Component {
             .then(this.onCharLoaded)
             .catch(this.onError);
 
-        this.foo.bar = 3;
+        // this.foo.bar = 3;
     }
 
     onCharLoaded = (char) => {

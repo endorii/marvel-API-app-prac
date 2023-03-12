@@ -17,7 +17,7 @@ class RandomChar extends Component {
     }
 
     componentDidMount() {
-        this.foo.bar = 0;
+        // this.foo.bar = 0;
         this.updateChar();
     }
 

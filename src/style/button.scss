@@ -88,4 +88,9 @@
     &:hover {
         transform: translateY(-5px);
     }
+    &:disabled {
+        // background-color: #949494;
+        filter: grayscale(0.8);
+        color: rgba(255, 255, 255, 0.39);
+    }
 }
